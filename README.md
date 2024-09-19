@@ -72,7 +72,12 @@ Bu kod parçası, K-Means algoritmasını kullanarak kümelere ayırma işlemi y
 Ardından, her küme için revenue ortalamalarını alıp veri noktalarına tahmini "revenue" değeri olarak atar. Sonuç olarak:
 
 Tahmini Revenue ve Gerçek Revenue Değerleri:
-![image](https://github.com/user-attachments/assets/2a2553bc-6d34-4b24-ab5d-764985dbb3be)
+revenue  predicted_revenue
+0  0.133988           0.151179
+1  0.094261           0.151179
+2  0.000000           0.000466
+3  0.029216           0.000466
+4  0.027468           0.000466
 
 Bu çıktı, denetimsiz öğrenme yöntemlerinden biri olan K-Means ile elde edilen tahmin sonuçlarıdır.
 K-Means doğrudan tahmin amaçlı bir algoritma olmadığından, revenue'yu kümelere ayırarak ortalama değer üzerinden bir tahmin üretir. 
@@ -129,7 +134,13 @@ Daha düşük katsayılara sahip özellikler ise modelde çok az etkiye sahiptir
 Tahmin Sonuçları:
 
 
-![image](https://github.com/user-attachments/assets/3b54f80a-8d2e-45d4-99e7-2a27ec8ac4d3)
+Tahmin Sonuçları:
+   Actual Revenue  Predicted Revenue
+0             0.0          -0.001035
+1             0.0          -0.002080
+2             0.0          -0.000123
+3             0.0          -0.002568
+4             0.0          -0.002247
 
 İlk 5 satırda, gerçek revenue değerlerinin 0 olduğu görülüyor, bu filmler muhtemelen düşük performanslı ya da hiç gelir elde edememiş filmler.
 Model de buna yakın tahminlerde bulunmuş, ancak çok küçük negatif tahminler üretiyor (örneğin, -0.001035 gibi). Bu farklar modeldeki küçük sapmalardan kaynaklanabilir.
